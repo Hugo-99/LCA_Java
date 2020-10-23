@@ -54,6 +54,9 @@ public class BinaryTree {
     }
 
     public Node lowestCommonAncestor(Node p, Node q){
+        if(p==null || q==null){
+            return null;
+        }
         if(isExist(p) && isExist(q)){
             return lowestCommonAncestor(root, p, q);
         }
